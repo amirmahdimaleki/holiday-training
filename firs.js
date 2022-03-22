@@ -1,8 +1,12 @@
 const http = require('http');
+//  first of all requirements
 
+// now creating server (first req:request then res:response)
 const server = http.createServer((req, res)=>{
+  // url is one of the "req" objects properties
   if(req.url === '/'){
     res.end(" this is our home page darling ^_^ ")
+     // our massage with "res" : res.end
 
   }
   if(req.url === '/about'){
@@ -15,3 +19,6 @@ const server = http.createServer((req, res)=>{
     `)
 })
 server.listen(5000)
+ //  runs the programme in localhost:5000
+
+
