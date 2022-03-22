@@ -3,7 +3,7 @@ const http = require('http');
 
 // now creating server (first req:request then res:response)
 const server = http.createServer((req, res)=>{
-  
+
   // url is one of the "req" objects properties
   if(req.url === '/'){
     res.end(" this is our home page darling ^_^ ")
@@ -13,7 +13,7 @@ const server = http.createServer((req, res)=>{
   if(req.url === '/about'){
     res.end(" are you lost babe? ¬_¬ ")
   }
-
+ 
   res.end(`
     <h1> Oops !!</h1>
     <p> seems you are lost ^_~ </p>
