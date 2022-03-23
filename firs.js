@@ -66,3 +66,35 @@ console.log('starting next task')
 //* server.listen(5000, () => {
 //*   console.log('Server listening on port : 5000....')
 //* })
+
+
+
+
+//* ********* another example for async this time by read and write file ****************
+
+
+
+const { readFile, writeFile} = require('fs').promises
+
+const starter = async () => {
+  try {
+    const first = await readFile('./content/first.txt', 'utf8') //=> pathes are examples
+    const second = await readFile('./content/second.txt', 'utf8') //=> pathes are examples
+    await writeFile(
+      './content/result-mind-grenade.txt', //=> pathes are examples
+      `THIS IS AWESOME : ${first} ${second}`,
+      { flag: 'a' }
+    )
+    console.log(first, second)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+starter()
+
+
+
+
+
+// ! events in node =========================================================================
