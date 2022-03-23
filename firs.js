@@ -177,3 +177,27 @@ stream.on('error', (err) => console.log(err))
 
 
 
+// ********************* stream with http **************************
+
+
+var http = require('http')
+var fs = require('fs')
+
+http
+  .createServer(function (req, res) {
+    //  the below method sends the whole file with s bog length(visible in network inspect tab)
+    // const text = fs.readFileSync('./content/big.txt', 'utf8')
+    // res.end(text)
+    const fileStream = fs.createReadStream('./content/big.txt', 'utf8')
+    fileStream.on('open', () => {
+      // .pipe makes readable stream a writable stream
+      fileStream.pipe(res)
+    })
+    fileStream.on('error', (err) => {
+      res.end(err)
+    })
+  })
+  .listen(5000)
+
+
+
