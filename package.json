@@ -10,7 +10,8 @@
   "version": "1.0.0",
   "main": "firs.js",
   "scripts": {
-   "start": "node firs.js"
+   "start": "node firs.js",
+   "dev":"nodemon firs.js"
   },
   "repository": {
     "type": "git",
