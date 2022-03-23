@@ -158,13 +158,20 @@ const { createReadStream } = require('fs')
 // default 64kb
 // last buffer - remainder
 // highWaterMark - control size
+// ? changes the size of the buffer file to 9000 kb 
 // const stream = createReadStream('./content/big.txt', { highWaterMark: 90000 })
+// ? encodes the text to utf8
 // const stream = createReadStream('../content/big.txt', { encoding: 'utf8' })
+// ? the whole mixed of thr codes below is :
+// ?  const stream = createReadStream('./content/big.txt', { highWaterMark: 90000, encoding:'utf8'})
 const stream = createReadStream('./content/big.txt')
 
+// https://nodejs.org/api/stream.html#event-data
 stream.on('data', (result) => {
   console.log(result)
 })
+
+//  error event
 stream.on('error', (err) => console.log(err))
 
 
