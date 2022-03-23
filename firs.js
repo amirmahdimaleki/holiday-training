@@ -27,6 +27,7 @@ server.listen(5000)
 
 //  a good example by John Smilga for async fs and a stat for event loop
 
+// todo : Tell me which line will be shown in the console first and which one last?
 
 const { readFile, writeFile } = require('fs')
 
@@ -42,7 +43,6 @@ readFile('./myTxt.txt', 'utf8', (err, res) => {
   console.log('completed first task')
 })
 console.log('starting next task')
-
 
 
 
