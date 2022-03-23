@@ -23,5 +23,26 @@ const server = http.createServer((req, res)=>{
 server.listen(5000)
  //  runs the programme in localhost:5000
 
+// ! event loop : async ======================================================
+
+//  a good example by John Smilga for async fs and a stat for event loop
+
+
+const { readFile, writeFile } = require('fs')
+
+console.log('started a first task')
+
+// readFile is async so it will be executed differently from other codes
+readFile('./myTxt.txt', 'utf8', (err, res) => {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log(res)
+  console.log('completed first task')
+})
+console.log('starting next task')
+
+
 
 
