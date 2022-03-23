@@ -25,7 +25,9 @@ server.listen(5000)
 
 // ! event loop : async ======================================================
 
-//  a good example by John Smilga for async fs and a stat for event loop
+//  a good example by John Smilga for async fs and a stat for event loop 
+
+// ? do you remember that setTimeout and setInterval were async?
 
 // todo : Tell me which line will be shown in the console first and which one last?
 
