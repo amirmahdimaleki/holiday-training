@@ -33,7 +33,7 @@ const { readFile, writeFile } = require('fs')
 
 console.log('started a first task')
 
-// readFile is async so it will be executed differently from other codes
+// readFile is async so it will be executed differently from other codes (it offloads)
 readFile('./myTxt.txt', 'utf8', (err, res) => {
   if (err) {
     console.log(err)
