@@ -1,4 +1,4 @@
-// ! creating a server =======================================================
+// ! creating a server ========================================================================
 console.log(" I AM ME! WHO ARE YOU?")
 const http = require('http');
 //  first of all requirements
@@ -23,9 +23,9 @@ const server = http.createServer((req, res)=>{
 server.listen(5000)
  //  runs the programme in localhost:5000
 
-// ! event loop : async ======================================================
+// ! event loop : async =========================================================================
 
-//  a good example by John Smilga for async fs and a stat for event loop 
+//* ******** a good example by John Smilga for async fs and a stat for event loop ***********
 
 // ? do you remember that setTimeout and setInterval were async?
 
@@ -48,3 +48,21 @@ console.log('starting next task')
 
 
 
+//* ********* another example for async this time by server ****************
+
+
+
+//* const http = require('http')
+//  every time u refresh the page in the terminal you'll see 'request event' 
+//  and in the webpage 'Hello World' one time
+//* const server = http.createServer((req, res) => {
+//  this line is just a response to the request we sent
+//*   console.log('request event')
+//*   res.end('Hello World')
+//* })
+
+//  you'll see 'Server listening on port : 5000....' as the first line in 
+// terminal and you will see that the process of request event will still be alive because listen is async
+//* server.listen(5000, () => {
+//*   console.log('Server listening on port : 5000....')
+//* })
