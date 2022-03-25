@@ -8,6 +8,7 @@
 //  by using import we can separate codes and make them cleaner
 
 // ! order of imports is important
+// ! the under file depends un the above
 
 // variables
 @import 'variables';
@@ -21,4 +22,4 @@
 // components (button, card, navbar etc)
 @import 'components/card';
 
-// utilities (margin, padding, opacity, etc)
+// utilities (mrg, pdg, opc, etc)
