@@ -4,8 +4,45 @@
 // then we create a gulpfile.js  to compile sass to css
 
 
+// import links to css files and the good part is we don't need to write .scss
+//  by using import we can separate codes and make them cleaner
+@import 'var';
+
 h1{
-    a{
-        color: red;
-    }
+    color: $primary;
+}
+
+a{
+    color: $secondary;
+}
+
+button{
+    color: white;
+    border:0;
+    border-radius: 6px;
+    background:$primary;
+    padding: 5px;
+}
+
+.error{
+    color: $error;
+    border-color: $error;
+    border-radius:$base-border-rad;
+}
+
+.info{
+    color: $info;
+    text-decoration: wavy;
+    font-weight: bolder;
+}
+
+.notification{
+    color: $secondary;
+    border-color: $secondary;
+    border-radius:$base-border-rad;
+    border-style:$base-border-style;
+}
+p{
+    margin: $base-mrg;
+    padding: $base-pdg;
 }
