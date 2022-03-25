@@ -1,5 +1,11 @@
 // .sass files syntax is a bit different with .scss files
-//  tools we use : [ npm, gulp, js, ]
+//  tools we use : [ npm, gulp, js, live sass compiler ]
 //  npm dev dependencies : npm install gulp gulp-sass sass --save-dev
 // then we create a gulpfile.js  to compile sass to css
 
+
+h1{
+    a{
+        color: red;
+    }
+}
