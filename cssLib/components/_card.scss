@@ -4,11 +4,12 @@
 .card{
     display: block;
     padding: $base-pdg;
-    border: $base-border-thickness $base-border-style #ddd;
+    border: $base-border-thickness $base-border-style #000;
     border-radius: math.div($base-border-rad, 4);
     box-shadow: $base-box-shadow;
 
     .card-title{
+         color: $error;
         font-size: $base-font-size;
         padding-bottom: $base-pdg;
         font-weight: bold;
